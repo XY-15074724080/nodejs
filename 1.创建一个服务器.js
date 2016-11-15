@@ -1,4 +1,5 @@
 /*摘自：http://www.nodebeginner.org/index-zh-cn.html#a-basic-http-server*/
+/*有兴趣的话，可以扩展阅读：http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb*/
 
 //首先请求（require）Node.js自带的 http 模块，并且把它赋值给 http 变量
 var http=require("http");//引入http模块   <script src=""></script>
