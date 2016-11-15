@@ -16,7 +16,7 @@ http.createServer(function(request,response){//创建一个服务器
 
 //}).listen(6666,'127.0.0.1');//指定服务器监听的ip地址和端口号，如果监听所有地址，则ip地址可以省略
 }).listen(6666);
-
+console.info("服务器已经启动，占用的端口号为：6666");
 
 //为了提高可读性，可以改写成：
 var http = require("http");
@@ -25,9 +25,10 @@ function onRequest(request, response) {
  	response.write("Hello World!");//在HTTP响应主体中发送文本“Hello World”。
 	response.end();//响应结束
 }
- http.createServer(onRequest).listen(8888);
+ http.createServer(onRequest).listen(6666);
  //在这里，我们定义了一个onRequest()函数，并将它作为参数传给createServer，类似回调函数。
  //我们给某个方法传递了一个函数，这个方法在有相应事件发生时调用这个函数来进行回调，我们把这叫做基于事件驱动的回调。
+console.info("服务器已经启动，占用的端口号为：6666");
 
 
 
