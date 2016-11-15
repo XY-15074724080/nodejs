@@ -28,3 +28,22 @@ function onRequest(request, response) {
  http.createServer(onRequest).listen(8888);
  //在这里，我们定义了一个onRequest()函数，并将它作为参数传给createServer，类似回调函数。
  //我们给某个方法传递了一个函数，这个方法在有相应事件发生时调用这个函数来进行回调，我们把这叫做基于事件驱动的回调。
+
+
+
+
+
+
+//另外的方法
+var http=require("http");//引入http模块   <script src=""></script>
+var server=http.createServer();//创建一个服务器
+server.on("request",function(req,res){//客户端每发送一个请求，就会触发这个监听事件一次
+	console.info(req.url);
+	res.write("<meta charset='utf-8' />");
+	res.write("谢谢访问...");
+	res.end();
+});
+
+server.listen(6666,function(){//启动服务器，并监听6666端口
+	console.info("服务器启动成功...");
+});
